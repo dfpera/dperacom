@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./header";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/layout.css";
 import * as styles from "./layout.module.css";
 

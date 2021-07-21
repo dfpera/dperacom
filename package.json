@@ -15,5 +15,9 @@
   },
   "devDependencies": {
     "lerna": "^3.13.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "gatsby-plugin-sass": "^4.9.0"
   }
 }
