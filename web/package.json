@@ -9,7 +9,9 @@
     "dev": "gatsby develop",
     "lint": "eslint .",
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
@@ -25,6 +27,12 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "babel-loader": "^8.2.2",
     "dotenv": "^8.0.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
