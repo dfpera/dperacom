@@ -14,13 +14,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Traction on Demand',
-        short_name: 'Traction on Demand',
+        name: 'Daniele Portfolio',
+        short_name: 'Daniele Portfolio',
         start_url: '/',
         background_color: '#232323',
         theme_color: '#ffffff',
         display: 'standalone',
-        icon: 'src/images/icon.png',
+        icon: 'src/img/logo.png',
       },
     },
     'gatsby-plugin-netlify',
