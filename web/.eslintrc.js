@@ -1,29 +1,43 @@
+// module.exports = {
+//   parser: "babel-eslint",
+//   parserOptions: {
+//     sourceType: "module",
+//     ecmaVersion: 2020,
+//     ecmaFeatures: {
+//       jsx: true
+//     }
+//   },
+//   env: {
+//     node: true,
+//     browser: true
+//   },
+//   rules: {
+//     "react/prop-types": "off"
+//   },
+//   extends: [
+//     "eslint:recommended",
+//     "plugin:import/errors",
+//     "plugin:react/recommended",
+//     "plugin:prettier/recommended"
+//   ],
+//   settings: {
+//     react: {
+//       pragma: "React",
+//       version: "detect"
+//     }
+//   }
+// };
+
 module.exports = {
-  parser: "babel-eslint",
-  parserOptions: {
-    sourceType: "module",
-    ecmaVersion: 2020,
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
-  env: {
-    node: true,
-    browser: true
-  },
+  extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings'],
   rules: {
-    "react/prop-types": "off"
+    'react/prop-types': 0,
+    'object-curly-spacing': ['error', 'never']
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
-  ],
   settings: {
     react: {
-      pragma: "React",
-      version: "detect"
+      pragma: 'React',
+      version: '17.0.2'
     }
   }
-};
+}

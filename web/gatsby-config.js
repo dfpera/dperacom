@@ -10,7 +10,20 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   plugins: [
-    'gatsby-plugin-sass',
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Traction on Demand',
+        short_name: 'Traction on Demand',
+        start_url: '/',
+        background_color: '#232323',
+        theme_color: '#ffffff',
+        display: 'standalone',
+        icon: 'src/images/icon.png',
+      },
+    },
+    'gatsby-plugin-netlify',
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
@@ -21,6 +34,24 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd && token
       }
-    }
+    },
+    'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages/`,
+      }
+    },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-transition-link',
+    'gatsby-plugin-client-side-redirect' // Must be last in the list
   ]
 }
